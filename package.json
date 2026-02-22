@@ -1,0 +1,21 @@
+{
+  "name": "kinopub-helper",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run copy && tsc -p tsconfig.json && npm run build:content && npm run build:bridge && npm run zip-dist",
+    "build:content": "esbuild src/content.ts --bundle --format=iife --target=es2022 --outfile=dist/content.js",
+    "build:bridge": "esbuild src/bridge.ts --bundle --format=iife --target=es2022 --outfile=dist/bridge.js",
+    "watch": "npm run clean && npm run copy && tsc -p tsconfig.json --watch",
+
+    "clean": "node ./scripts/clean.mjs",
+    "copy": "node ./scripts/copy.mjs",
+    "zip-dist": "node ./scripts/zip-dist.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.37",
+    "@types/w3c-web-hid": "^1.0.6",
+    "esbuild": "^0.27.3",
+    "typescript": "^5.9.3"
+  }
+}

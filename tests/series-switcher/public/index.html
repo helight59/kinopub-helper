@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kinopub Helper — Series Switcher Test</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 18px; }
+      .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 10px 0; }
+      .card { border: 1px solid #ddd; border-radius: 10px; padding: 14px; max-width: 920px; }
+      button { padding: 10px 12px; cursor: pointer; }
+      code { background: #f3f3f3; padding: 2px 6px; border-radius: 6px; }
+      .muted { color: #666; font-size: 13px; }
+      .kbd { border: 1px solid #aaa; border-bottom-width: 3px; padding: 2px 6px; border-radius: 6px; background: #fff; }
+      video { width: 720px; max-width: 100%; border-radius: 10px; background: #000; }
+      .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: #f6f6f6; }
+      .small { font-size: 12px; }
+      .spacer { height: 6px; }
+    </style>
+</head>
+<body>
+<h2>Kinopub Helper — Series Switcher Test</h2>
+<div class="muted">This is a minimal Kinopub-like page to test the extension without real Kinopub.</div>
+
+<div class="card">
+    <div class="row">
+        <div class="pill"><b>URL</b> <code id="url"></code></div>
+        <div class="pill"><b>Item</b> <code id="item"></code></div>
+        <div class="pill"><b>Season</b> <code id="season"></code></div>
+        <div class="pill"><b>Episode</b> <code id="episode"></code></div>
+    </div>
+
+    <div class="row">
+        <button id="start">Start playback</button>
+        <button class="control-button btn-prev" id="prev">Prev episode</button>
+        <button class="control-button btn-next" id="next">Next episode</button>
+        <span class="muted small">
+            Try media keys: <span class="kbd">Previous Track</span> / <span class="kbd">Next Track</span>
+        </span>
+    </div>
+
+    <div class="spacer"></div>
+
+    <video id="video" controls playsinline></video>
+
+    <div class="row muted small">
+        <div>Video stream is generated from a canvas (no external files).</div>
+        <div>To emulate buffering, press: <span class="kbd">B</span></div>
+    </div>
+</div>
+
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>
