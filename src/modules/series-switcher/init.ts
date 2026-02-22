@@ -180,7 +180,6 @@ export const initSeriesSwitcher = async (ctx: ModuleInitContext): Promise<void> 
   setupKeydownFallback();
   startReinstallLoop();
 
-  // Если модуль выключат через UI — можем убрать handlers.
   ctx.api.onSettingsChanged((next) => {
     const m = next.modules['series-switcher'];
     if (m && m.enabled === false) {

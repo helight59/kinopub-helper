@@ -129,8 +129,6 @@
     dest.stream.getAudioTracks().forEach((tr) => merged.addTrack(tr));
 
     video.srcObject = merged;
-
-    // Не автоплей — стартуем по кнопке, чтобы точно был user gesture.
   };
 
   $('start').addEventListener('click', async () => {
@@ -140,7 +138,6 @@
     try {
       await video.play();
     } catch {
-      // если всё равно блок — пользователь нажмёт play в контролах
     }
   });
 
