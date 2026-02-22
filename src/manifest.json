@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Kinopub Helper",
+  "version": "1.0.0",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["*://kino.pub/*", "*://*.kino.pub/*"],
+  "optional_host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "assets/icon/kinopub_helper_icon_16.png",
+    "32": "assets/icon/kinopub_helper_icon_32.png",
+    "48": "assets/icon/kinopub_helper_icon_48.png",
+    "128": "assets/icon/kinopub_helper_icon_128.png",
+    "256": "assets/icon/kinopub_helper_icon_256.png",
+    "512": "assets/icon/kinopub_helper_icon_512.png",
+    "1048": "assets/icon/kinopub_helper_icon_1024.png"
+  },
+  "action": {
+    "default_popup": "ui/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon/kinopub_helper_icon_16.png",
+      "32": "assets/icon/kinopub_helper_icon_32.png",
+      "48": "assets/icon/kinopub_helper_icon_48.png",
+      "128": "assets/icon/kinopub_helper_icon_128.png",
+      "256": "assets/icon/kinopub_helper_icon_256.png",
+      "512": "assets/icon/kinopub_helper_icon_512.png",
+      "1048": "assets/icon/kinopub_helper_icon_1024.png"
+    }
+  },
+  "options_ui": {
+    "page": "ui/settings/settings.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["bridge.js"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
