@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "Kinopub Helper",
   "version": "1.0.0",
+  "description": "Расширение, призванное улучшить взаимодействие с сервисом **Kinopub**.",
   "permissions": ["storage", "scripting", "tabs"],
   "host_permissions": ["*://kino.pub/*", "*://*.kino.pub/*"],
   "optional_host_permissions": ["*://*/*"],

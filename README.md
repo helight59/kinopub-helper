@@ -36,6 +36,10 @@
 
 ---
 
+## Если есть пожелания, то оставляйте их тут: https://github.com/helight59/kinopub-helper/issues
+
+---
+
 ## Установка зависимостей
 
 ```bash
